@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#6fb2e6" />
+    <meta name="description" content="Fly the Sellbird swallow through a painted sky over the rooftops and eat every email before the round runs out." />
+    <title>Sellbird Sky</title>
+    <link rel="icon" href="/sellbird-mark.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  </head>
+  <body>
+    <canvas id="scene"></canvas>
+
+    <div class="hud" id="hud" hidden>
+      <div class="hud-score">
+        <b id="score">0</b>
+        <span>emails eaten</span>
+        <em id="combo"></em>
+      </div>
+      <div class="hud-time" id="time">1:30</div>
+      <div class="hud-breath" aria-hidden="true"><i id="breath"></i><span>Breath</span></div>
+    </div>
+    <div class="pops" id="pops"></div>
+    <div class="stick" id="stick" hidden><i></i></div>
+    <button class="flap" id="flap" type="button" hidden>Flap</button>
+    <button class="mute" id="mute" type="button" aria-label="Sound"></button>
+
+    <section class="card" id="title">
+      <img class="mark" src="/sellbird-mark.svg" alt="" />
+      <p class="eyebrow">Sellbird</p>
+      <h1>Sellbird <i>Sky</i></h1>
+      <p class="lede">Fly the swallow over the rooftops and eat every email in the sky. Gold replies are worth five but they dart away. Spam bites back.</p>
+      <button class="go" id="start" type="button">Take flight</button>
+      <p class="how" id="how"></p>
+    </section>
+
+    <section class="card" id="over" hidden>
+      <p class="eyebrow">Round over</p>
+      <h2><b id="final">0</b> <i>emails eaten</i></h2>
+      <dl class="stats">
+        <div><dt>Best</dt><dd id="best">0</dd></div>
+        <div><dt>Replies</dt><dd id="replies">0</dd></div>
+        <div><dt>Streak</dt><dd id="streak">0</dd></div>
+        <div><dt>Spam hit</dt><dd id="spams">0</dd></div>
+      </dl>
+      <button class="go" id="again" type="button">Fly again</button>
+      <a class="site" href="https://sellbird.ai" target="_blank" rel="noopener">sellbird.ai</a>
+    </section>
+
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
